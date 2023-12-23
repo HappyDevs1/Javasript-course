@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exersise 8</title>
+    </head>
+
+    <body>
+        
+        <script>
+            const product1 = {
+                name: 'pepsi',
+                price: 2260,
+            };
+
+            const product2 = {
+                name: 'orange juice',
+                price: 2700,
+            }
+
+            function isSameProduct(product1, product2) {
+                if (product1.name === product2.name && 
+                    product1.price === product2.price) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            console.log(isSameProduct(product1, product2));
+        </script>
+    </body>
+</html>
