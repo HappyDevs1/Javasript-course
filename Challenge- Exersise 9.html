@@ -27,17 +27,15 @@
 
         <p class="js-total-cost"></p>
 
-        <input type="text"
-            class="js-key-up-input"
-            placeholder="Type"
-            onkeyup="textDisplayer();">
-        
-        <p class="js-key-up-message"></p>
-
+        <input placeholder="Type something" class="js-input"
+        onkeyup="
+        const inputElement = document.querySelector('.js-input');
+        document.querySelector('.js-message')
+        .innerHTML = inputElement.value;
+        ">
+  
+      <p class="js-message"></p>
         <script>
-            function textDisplayer () {
-                document.querySelector('.js-key-up-message').innerHTML = '';
-            }
             String(25);
             console.log('25' - 5);
             console.log('25' + 5)
@@ -57,15 +55,15 @@
                 function calculateCost () {
                 const inputElement = document.querySelector('.js-cost-input');
 
-                let cost = Number(inputElement.value);
+                let cost = Number(inputElement.value) * 100;
 
-                if (cost <= 40) {
-                    cost += 10;
+                if (cost <= 4000) {
+                    cost += 1000;
                 } else {
                     cost += 0;
                 }
 
-                const total = document.querySelector('.js-total-cost').innerHTML = `$${cost}`
+                const total = document.querySelector('.js-total-cost').innerHTML = `$${cost / 100}`
             }
 
             }
